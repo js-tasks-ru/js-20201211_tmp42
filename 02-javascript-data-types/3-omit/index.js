@@ -8,7 +8,7 @@ export const omit = (obj, ...fields) => {
   const newMas={};
 
   for (const [key, value] of Object.entries(obj)) {
-    if (fields.indexOf(key)==-1) {
+    if (fields.indexOf(key)===-1) {
       newMas[key]=value;
     }
   }
