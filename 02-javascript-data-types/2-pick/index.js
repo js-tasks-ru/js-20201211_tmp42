@@ -5,5 +5,13 @@
  * @returns {object} - returns the new object
  */
 export const pick = (obj, ...fields) => {
+  const newMas={};
 
+  for (const [key, value] of Object.entries(obj)) {
+    if (fields.indexOf(key)!==-1) {
+      newMas[key]=value;
+    }
+  }
+
+  return newMas;
 };
